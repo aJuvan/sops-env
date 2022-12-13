@@ -3,5 +3,5 @@
 WIP mozilla SOPS environment varible injection.
 
 ```sh
-alias envup='source <(sops-env --file env.yml)'
+alias envup='source <(sops-env -f .env.yml -p)'
 ```
