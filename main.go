@@ -26,6 +26,7 @@ func parseEnv(key string, value string) string {
 	value = strings.Replace(value, "\\", "\\\\", -1);
 	value = strings.Replace(value, "\n", "\\n",  -1);
 	value = strings.Replace(value, "\t", "\\\t", -1);
+	value = strings.Replace(value, "\"", "\\\"", -1);
 	value = strings.Replace(value, " ",  "\\ ",  -1);
 
 	return "export " + key + "=" + value;
